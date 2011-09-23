@@ -1,0 +1,7 @@
+source "http://rubygems.org"
+
+# Specify your gem's dependencies in zootool_mixi.gemspec
+gemspec
+
+gem 'nokogiri'
+gem 'mixi_diary', :git => 'git://github.com/Tomohiro/mixi_diary.git'
