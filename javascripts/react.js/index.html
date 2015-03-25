@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/react.min.js"></script>
+  </head>
+  <body>
+    <div id="greeting"></div>
+
+    <!-- React.js -->
+    <!-- JS の処理が完了する前に画面に HTML を表示するため body 内に書く -->
+    <script type="text/jsx">
+
+    // "Hello, {名前}!" と画面に表示する React コンポーネントを Greeting
+    // オブジェクトとして作成
+    var Greeting = React.createClass({
+      // Greeting が内部で持つ状態 (state 変数) を初期化
+      getInitialState: function () {
+        return { name: "John" };
+      },
+
+      // イベントハンドラーを定義 (メソッド名は何でも良いっぽい)
+      handler: function (e) {
+        // イベントが発火したオブジェクトの値を state に入れる
+        var state = { name: e.target.value };
+
+        // state 変数を自コンポーネントの状態としてセットする
+        // ここでセットすることにより render で描画する表示が
+        // 自動的に更新される
+        this.setState(state);
+      },
+
+      // レンダリング
+      render: function() {
+        return (
+          <form className="greeting">
+            <input type="text" placeholder="Your name" onKeyUp={this.handler} />
+            <h1>Hello, {this.state.name}!</h1>
+          </form>
+        );
+      }
+    });
+
+    // React コンポーネントを DOM にバインドする
+    React.render(
+      <Greeting />,
+      document.getElementById("greeting")
+    );
+    </script>
+  </body>
+</html>
