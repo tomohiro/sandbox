@@ -5,32 +5,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/react.min.js"></script>
   </head>
   <body>
-    <div id="greeting"></div>
-
     <!-- React.js -->
-    <!-- JS ã®å‡¦ç†ãŒå®Œäº†ã™ã‚‹å‰ã«ç”»é¢ã« HTML ã‚’è¡¨ç¤ºã™ã‚‹ãŸã‚ body å†…ã«æ›¸ã -->
+    <!-- JS ¤Î½èÍı¤¬´°Î»¤¹¤ëÁ°¤Ë²èÌÌ¤Ë HTML ¤òÉ½¼¨¤¹¤ë¤¿¤á body Æâ¤Ë½ñ¤¯ -->
     <script type="text/jsx">
 
-    // "Hello, {åå‰}!" ã¨ç”»é¢ã«è¡¨ç¤ºã™ã‚‹ React ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’ Greeting
-    // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¨ã—ã¦ä½œæˆ
+    // "Hello, {Ì¾Á°}!" ¤È²èÌÌ¤ËÉ½¼¨¤¹¤ë React ¥³¥ó¥İ¡¼¥Í¥ó¥È¤ò Greeting
+    // ¥ª¥Ö¥¸¥§¥¯¥È¤È¤·¤ÆºîÀ®
     var Greeting = React.createClass({
-      // Greeting ãŒå†…éƒ¨ã§æŒã¤çŠ¶æ…‹ (state å¤‰æ•°) ã‚’åˆæœŸåŒ–
+      // Greeting ¤¬ÆâÉô¤Ç»ı¤Ä¾õÂÖ (state ÊÑ¿ô) ¤ò½é´ü²½
       getInitialState: function () {
         return { name: "John" };
       },
 
-      // ã‚¤ãƒ™ãƒ³ãƒˆãƒãƒ³ãƒ‰ãƒ©ãƒ¼ã‚’å®šç¾© (ãƒ¡ã‚½ãƒƒãƒ‰åã¯ä½•ã§ã‚‚è‰¯ã„ã£ã½ã„)
-      handler: function (e) {
-        // ã‚¤ãƒ™ãƒ³ãƒˆãŒç™ºç«ã—ãŸã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å€¤ã‚’ state ã«å…¥ã‚Œã‚‹
-        var state = { name: e.target.value };
+      // ¥¤¥Ù¥ó¥È¥Ï¥ó¥É¥é¡¼¤òÄêµÁ (¥á¥½¥Ã¥ÉÌ¾¤Ï²¿¤Ç¤âÎÉ¤¤¤Ã¤İ¤¤)
+      handler: function (event) {
+        // ¥¤¥Ù¥ó¥È¤¬È¯²Ğ¤·¤¿¥ª¥Ö¥¸¥§¥¯¥È¤ÎÃÍ¤ò state ¤ËÆş¤ì¤ë
+        var state = { name: event.target.value };
 
-        // state å¤‰æ•°ã‚’è‡ªã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã®çŠ¶æ…‹ã¨ã—ã¦ã‚»ãƒƒãƒˆã™ã‚‹
-        // ã“ã“ã§ã‚»ãƒƒãƒˆã™ã‚‹ã“ã¨ã«ã‚ˆã‚Š render ã§æç”»ã™ã‚‹è¡¨ç¤ºãŒ
-        // è‡ªå‹•çš„ã«æ›´æ–°ã•ã‚Œã‚‹
+        // state ÊÑ¿ô¤ò¼«¥³¥ó¥İ¡¼¥Í¥ó¥È¤Î¾õÂÖ¤È¤·¤Æ¥»¥Ã¥È¤¹¤ë
+        // ¤³¤³¤Ç¥»¥Ã¥È¤¹¤ë¤³¤È¤Ë¤è¤ê render ¤ÇÉÁ²è¤¹¤ëÉ½¼¨¤¬
+        // ¼«Æ°Åª¤Ë¹¹¿·¤µ¤ì¤ë
         this.setState(state);
       },
 
-      // ãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°
+      // ¥ì¥ó¥À¥ê¥ó¥°
       render: function() {
         return (
           <form className="greeting">
@@ -41,11 +39,8 @@
       }
     });
 
-    // React ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’ DOM ã«ãƒã‚¤ãƒ³ãƒ‰ã™ã‚‹
-    React.render(
-      <Greeting />,
-      document.getElementById("greeting")
-    );
+    // React ¥³¥ó¥İ¡¼¥Í¥ó¥È¤ò DOM ¤Ë¥Ğ¥¤¥ó¥É¤¹¤ë
+    React.render(<Greeting />, document.body);
     </script>
   </body>
 </html>
