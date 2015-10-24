@@ -1,8 +1,4 @@
-My Sandbox
+Sandbox
 ================================================================================
 
-
-- JavaScript
-- Perl
-- Ruby
-- Swift
+This is my sandbox projects.
