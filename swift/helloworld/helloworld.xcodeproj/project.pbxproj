@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B1BCA1CC1BDA7EE8006372AE /* helloworld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helloworld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1BCA1CC1BDA7EE8006372AE /* helloworld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = helloworld.app; path = "/Users/tomohiro/Workspaces/Repositories/src/github.com/Tomohiro/sandbox/swift/helloworld/build/Debug-iphoneos/helloworld.app"; sourceTree = "<absolute>"; };
 		B1BCA1CF1BDA7EE8006372AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1BCA1D11BDA7EE8006372AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1BCA1D41BDA7EE8006372AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,16 +39,7 @@
 			isa = PBXGroup;
 			children = (
 				B1BCA1CE1BDA7EE8006372AE /* helloworld */,
-				B1BCA1CD1BDA7EE8006372AE /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		B1BCA1CD1BDA7EE8006372AE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B1BCA1CC1BDA7EE8006372AE /* helloworld.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		B1BCA1CE1BDA7EE8006372AE /* helloworld */ = {
@@ -108,7 +99,7 @@
 				Base,
 			);
 			mainGroup = B1BCA1C31BDA7EE8006372AE;
-			productRefGroup = B1BCA1CD1BDA7EE8006372AE /* Products */;
+			productRefGroup = B1BCA1C31BDA7EE8006372AE;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -284,6 +275,7 @@
 				B1BCA1E01BDA7EE8006372AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
