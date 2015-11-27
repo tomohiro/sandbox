@@ -1,4 +1,6 @@
 [package]
-name = "mynumber"
+name = "mynumber-verifier"
 version = "0.1.0"
-authors = ["Tomohiro TAIRA <tomohiro.t@gmail.com>"]
+
+[dependencies]
+mynumber = "0.1.0"
