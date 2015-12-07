@@ -1,6 +1,6 @@
 [package]
 name = "mynumber-verifier"
-version = "0.1.0"
+version = "0.2.0"
 
 [dependencies]
-mynumber = "0.1.0"
+mynumber = "0.2.0"
