@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+
+var role = process.env.AWS_LAMBDA_IAM_ROLE_ARN;
+var json_body = {
+  name: 'example',
+  description: 'Example project',
+  role: role
+}
+
+fs.writeFile('project.json', JSON.stringify(json_body), function(err) {
+  if (err) {
+     return console.log(err);
+  }
+  console.log("The file was saved!");
+});
