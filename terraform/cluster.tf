@@ -25,17 +25,6 @@ resource "template_file" "user_data" {
     }
 }
 
-resource "template_cloudinit_config" "config" {
-    gzip          = true
-    base64_encode = true
-
-    part {
-      filename     = "user-data.yml"
-      content_type = "text/cloud-config"
-      content      = "${template_file.user_data.rendered}"
-    }
-}
-
 resource "digitalocean_droplet" "test" {
     image              = "coreos-stable"
     name               = "test"
@@ -44,5 +33,5 @@ resource "digitalocean_droplet" "test" {
     ipv6               = false
     private_networking = true
     ssh_keys           = ["${var.ssh_key_id}"]
-    user_data          = "${template_cloudinit_config.config.rendered}"
+    user_data          = "${template_file.user_data.rendered}"
 }
