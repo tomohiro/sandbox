@@ -26,7 +26,7 @@ resource "template_file" "user_data" {
 }
 
 resource "digitalocean_droplet" "core-1" {
-    image              = "12382129"
+    image              = "15435464"
     name               = "core-1"
     region             = "sgp1"
     size               = "1gb"
