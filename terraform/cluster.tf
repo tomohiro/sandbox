@@ -31,7 +31,7 @@ resource "template_cloudinit_config" "config" {
 
     part {
       filename     = "user-data.yml"
-      content_type = "text/part-handler"
+      content_type = "text/cloud-config"
       content      = "${template_file.user_data.rendered}"
     }
 }
