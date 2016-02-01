@@ -25,8 +25,8 @@ resource "template_file" "user_data" {
     }
 }
 
-resource "digitalocean_droplet" "core-1" {
-    image              = "15435464"
+resource "digitalocean_droplet" "test" {
+    image              = "coreos-stable"
     name               = "core-1"
     region             = "sgp1"
     size               = "1gb"
