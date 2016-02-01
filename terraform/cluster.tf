@@ -27,7 +27,7 @@ resource "template_file" "user_data" {
 
 resource "digitalocean_droplet" "test" {
     image              = "coreos-stable"
-    name               = "core-1"
+    name               = "test"
     region             = "sgp1"
     size               = "1gb"
     ipv6               = false
