@@ -1,0 +1,15 @@
+# Ruby
+.bundle
+vendor
+
+# Vagrant
+.vagrant
+
+# Terraform
+.terraform
+
+# CoreOS
+user-data.yml
+
+# Direnv
+.envrc
