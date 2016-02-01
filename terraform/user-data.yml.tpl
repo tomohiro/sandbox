@@ -51,7 +51,7 @@ coreos:
       command: start
       content: |
         [Socket]
-        ListenStream=3843
+        ListenStream=${ssh_port}
         Accept=yes
     - name: etcd.service
       command: start
