@@ -1,0 +1,20 @@
+{
+  "name": "websocket-echo-server",
+  "version": "1.0.0",
+  "description": "WebSocket Echo Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "WebSocket"
+  ],
+  "author": "Tomohiro Taira",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "ws": "^7.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1"
+  }
+}
